@@ -51,7 +51,10 @@ import { Image } from "astro:assets";
       />
       <h1>Strona internetowa w budowie</h1>
       <h2>
-        Zapraszamy do kontaktu<br /><a href="tel:575103600">575 103 600</a>
+        Zapraszamy do kontaktu<br /><br/><a href="tel:575103600"
+          >575 103 600<br />
+          <a href="mailto:kl@klucz.com.pl">kl@klucz.com.pl</a></a
+        >
       </h2>
     </section>
   </body>
@@ -84,8 +87,9 @@ import { Image } from "astro:assets";
       font-weight: 400;
     }
 
-    a {
+    h2 > a {
       color: inherit;
+	  margin-block: 1rem;
     }
 
     section {
