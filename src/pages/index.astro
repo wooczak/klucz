@@ -1,17 +1,118 @@
 ---
-
+import { Image } from "astro:assets";
 ---
 
 <html lang="pl">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      type="image/png"
+      sizes="16x16"
+      rel="icon"
+      href="/icons8-key-office-m-16.png"
+    />
+    <link
+      type="image/png"
+      sizes="32x32"
+      rel="icon"
+      href="/icons8-key-office-m-32.png"
+    />
+    <link
+      type="image/png"
+      sizes="96x96"
+      rel="icon"
+      href="/icons8-key-office-m-96.png"
+    />
+    <link
+      type="image/png"
+      sizes="120x120"
+      rel="icon"
+      href="/icons8-key-office-m-120.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Klucz - w budowie...</title>
+  </head>
+  <body>
+    <section>
+      <Image
+        id="icon"
+        src="/key.png"
+        width={96}
+        height={96}
+        alt="Klucz - w budowie..."
+      />
+      <h1>Strona internetowa w budowie</h1>
+      <h2>
+        Zapraszamy do kontaktu<br /><a href="tel:575103600">575 103 600</a>
+      </h2>
+    </section>
+  </body>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    span {
+      font-family: "Inter", sans-serif;
+      font-optical-sizing: auto;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-block: 3rem;
+      font-weight: 400;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    section {
+      max-width: 600px;
+      margin-inline: auto;
+      text-align: center;
+      padding-block: 4rem;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    #icon {
+      animation: bounce 1s infinite;
+    }
+  </style>
 </html>
