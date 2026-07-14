@@ -50,9 +50,9 @@ import { Image } from "astro:assets";
         alt="Klucz - w budowie..."
       />
       <h1>Strona internetowa w przebudowie</h1>
-	  <p>Zmieniamy się dla Was</p>
+      <p>Zmieniamy się dla Was</p>
       <h2>
-        Zapraszamy do kontaktu<br /><br/><a href="tel:575103600"
+        Zapraszamy do kontaktu<br /><br /><a href="tel:575103600"
           >575 103 600<br />
           <a href="mailto:kl@klucz.com.pl">kl@klucz.com.pl</a></a
         >
@@ -79,24 +79,36 @@ import { Image } from "astro:assets";
     }
 
     h1 {
-      font-size: 3.5rem;
+      font-size: 3rem;
+
+      @media (max-width: 600px) {
+        font-size: 2rem;
+      }
     }
 
     h2 {
       font-size: 2rem;
       margin-block: 3rem;
       font-weight: 400;
+
+      @media (max-width: 600px) {
+        font-size: 1.25rem;
+      }
     }
 
-	p {
-		font-size: 1.75rem;
-		font-weight: 600;
-		margin-block: 1rem;
-	}
+    p {
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-block: 1rem;
+
+	  @media (max-width: 600px) {
+		font-size: 1.5rem;
+	  }
+    }
 
     h2 > a {
       color: inherit;
-	  margin-block: 1rem;
+      margin-block: 1rem;
     }
 
     section {
@@ -108,6 +120,13 @@ import { Image } from "astro:assets";
       position: absolute;
       left: 50%;
       top: 50%;
+
+	  @media (max-width: 600px) {
+		max-width: 1000px;
+		transform: unset;
+		left: unset;
+		top: unset;
+	  }
     }
 
     @keyframes bounce {
